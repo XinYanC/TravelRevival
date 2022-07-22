@@ -39,13 +39,22 @@ html, body {
 #it_grid{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 5%;
+  gap: 2%;
   padding: 2%;
 }
 #it{
   display: flex;
+  align-items: center;
+  gap: 3%;
 }
 #stuff{
   width: 50%;
   display: block;
+}
+.add-button{
+  width: 100%;
+}
+#words{
+  display: flex;
+  flex-direction: column;
 }
