@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>___</title>
+  <title>Travel Revival</title>
   <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
   <!-- Bulma Version 0.9.0-->
   <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css" />
   <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
 </head>
 
@@ -30,16 +32,16 @@
 
     <div id="navbarExampleTransparentExample" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="#">
           Home
         </a>
-        <a id="store" class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="#shopping_cart_container">
           Store
         </a>
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="#desinations">
           Destinations
         </a>
-        <a class="navbar-item" href="https://bulma.io/">
+        <a class="navbar-item" href="#contact">
           Contact
         </a>
       </div>
@@ -49,9 +51,7 @@
     <div class="navbar-end">
       <div class="navbar-item">
         <div class="field">
-          <div class="control">
-            <input class="input" type="text" placeholder="Search . . .">
-          </div>
+          <a href="cart.html"><button>View Cart</button></a>
         </div>
       </div>
     </div>
@@ -59,24 +59,44 @@
   </nav>
 
   <section class="hero">
-    <figure class="image">
+    <div id="welcome">
+      <div id="title">
+        <h3 id="wl">Welcome to the</h3>
+        <h1 id="tr">Travel Revival</h1>
+      </div>
+<!--     <figure class="image">
       <img src="https://i.pinimg.com/originals/c4/75/d2/c475d2ed22342957d6651a246a14edf6.jpg" alt="travel">
-    </figure>
+    </figure> -->
+    </div>
   </section>
 
   <section class="section">
     <div class="container has-text-centered">
-      <h2 class="title">The Travel Revival</h2>
+      <h2 class="title">Our Mission</h2>
       <p> The development of social links, chances for learning and growth, and dedication are all related to the aim of
         travel. We get the chance to learn new skills, experience different cultures, and be fully immersed in an
         activity. We become more attuned to our inner selves and others. Get unique access to our customised tools,
-        including ticket buying and helpful tips, when you travel with Travel Revival! </p>
+        including ticket buying and helpful tips, when you travel with Travel Revival! </p><br><br><br>
+      <section id="shopping_cart_container" class="container">
+        <div class="columns is-centered">
+          <div className="column is-half">
+            <div class="box">
+              <p>
+                <span class="tag">Your Shopping Cart</span>
+              </p>
+              <p>
+                (Add items to your cart by browsing below and clicking the "Add To Cart" button.)</p>
+              <br>
+              <div id="cart"></div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="columns is-centered" style="padding: 2rem">
+      <div id="col" class="columns is-centered" style="padding: 2rem">
         <!--               <h2 id="store">Our Travel Store</h2> -->
-        <div class="column">
-          <span class="card modal-button"
-                      data-target="carryon">
+        <div id="select" class="column">
+          <span class="card modal-button" data-target="carryon">
             <div class="card-image">
               <figure class="image is-2by1">
                 <img
@@ -87,7 +107,7 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-<!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
+                  <!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
                       data-target="xinyan">Browse</span></p> -->
                   <h2 class="title is-5">Carry-on Essentials</h2>
                 </div>
@@ -96,15 +116,13 @@
               <div class="content">
                 <p>Shop our carry on essentials today!</p>
                 <p>20% off if you fly with us!</p>
-                <button class="modal-button"
-                      data-target="carryon">Browse Now!</button>
+                <button class="modal-button" data-target="carryon">Browse Now!</button>
               </div>
             </div>
           </span>
         </div>
-        <div class="column">
-          <span class="card modal-button"
-                      data-target="xinyan">
+        <div id="select" class="column">
+          <span class="card modal-button" data-target="xinyan">
             <div class="card-image">
               <figure class="image is-2by1">
                 <img
@@ -115,7 +133,7 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-<!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
+                  <!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
                       data-target="xinyan">Browse</span></p> -->
                   <p class="subtitle is-6">Essentials</p>
                 </div>
@@ -130,9 +148,8 @@
             </div>
           </span>
         </div>
-        <div class="column">
-          <span class="card modal-button"
-                      data-target="xinyan">
+        <div id="select" class="column">
+          <span class="card modal-button" data-target="xinyan">
             <div class="card-image">
               <figure class="image is-2by1">
                 <img
@@ -143,7 +160,7 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-<!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
+                  <!--                   <p class="title is-4 modal-button" data-target="xinyan"><span class="button modal-button"
                       data-target="xinyan">Browse</span></p> -->
                   <p class="subtitle is-6">Essentials</p>
                 </div>
@@ -163,7 +180,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="desinations">
     <div class="container has-text-centered">
       <h2 class="title">Featured Destinations</h2>
 
@@ -172,32 +189,36 @@
           <article class="tile is-child box">
             <figure class="image">
               <img
-                src= https://www.tripsavvy.com/thmb/-qDIzSH8_azRhTvpAg-CIKWrFxE=/2120x1414/filters:fill(auto,1)/London-big-Ben-58b5d2663df78cdcd8c69fd4.jpg>
+                src=https://www.tripsavvy.com/thmb/-qDIzSH8_azRhTvpAg-CIKWrFxE=/2120x1414/filters:fill(auto,1)/London-big-Ben-58b5d2663df78cdcd8c69fd4.jpg>
             </figure>
             <p class="title">London</p>
-            <p class="subtitle"> Throughout its 2,000-year history, London has been refined into a truly magnificent city, whether you're searching for art or architecture, gastronomy or sports. London is renowned for its fashion, gastronomy, art, and architecture, some of which are unmatched anywhere else in the world. </p>
+            <p class="subtitle"> Throughout its 2,000-year history, London has been refined into a truly magnificent
+              city, whether you're searching for art or architecture, gastronomy or sports. London is renowned for its
+              fashion, gastronomy, art, and architecture, some of which are unmatched anywhere else in the world. </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child box">
             <figure class="image">
-              <img
-                src="http://cdn.cnn.com/cnnnext/dam/assets/200924183413-dubai-9-1.jpg">
+              <img src="http://cdn.cnn.com/cnnnext/dam/assets/200924183413-dubai-9-1.jpg">
             </figure>
             <p class="title"> Dubai </p>
-            <p class="subtitle"> In addition to a host of other activities, tourists may learn about the emirate's history and culture, ride camels in the desert, swim with dolphins, spend the day at a waterpark, go on a hot air balloon journey, and much more. </p>
+            <p class="subtitle"> In addition to a host of other activities, tourists may learn about the emirate's
+              history and culture, ride camels in the desert, swim with dolphins, spend the day at a waterpark, go on a
+              hot air balloon journey, and much more. </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child box">
             <figure class="image">
-              <img
-                src="https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg">
+              <img src="https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg">
             </figure>
             <p class="title"> Indonesia </p>
-            <p class="subtitle"> </p>
+            <p class="subtitle"> Indonesia is one of the most well-liked locations in the world for surfing and yoga
+              retreats because of its abundance of stunning islands and beaches, rich wildlife, and cultural legacy.
+            </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
@@ -208,32 +229,36 @@
           <article class="tile is-child box">
             <figure class="image">
               <img
-                src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+                src="https://theluxurytravelexpert.com/wp-content/uploads/2022/05/best-resorts-and-hotels-in-the-Maldives.jpg">
             </figure>
-            <p class="title">New York</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
+            <p class="title"> Maldives </p>
+            <p class="subtitle"> The Maldives is well-known for many things, including its vibrant culture, immaculate
+              beaches, abundant vegetation, and intriguing sites. Along with its many beautiful monuments, the Maldives
+              is well-known for its water sports and other adventurous pursuits. </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child box">
             <figure class="image">
-              <img
-                src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+              <img src="https://www.usmobile.com/blog/wp-content/uploads/2020/11/France-Eiffel-tower.jpg">
             </figure>
-            <p class="title">New York</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
+            <p class="title"> France </p>
+            <p class="subtitle"> With the shimmering French Riviera coasts, the patchwork meadows of the Loire Valley,
+              the snow-capped Alps, and the centuries-old port towns of Normandy, France has a variety of stunning
+              landscapes. Of course, outdoor enthusiasts will find this to be quite tempting. </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
         <div class="tile is-parent">
           <article class="tile is-child box">
             <figure class="image">
-              <img
-                src="https://images.pexels.com/photos/374710/pexels-photo-374710.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260">
+              <img src="https://cdn.britannica.com/82/195482-050-2373E635/Amalfi-Italy.jpg">
             </figure>
-            <p class="title">New York</p>
-            <p class="subtitle">Fri 27 Nov 2016</p>
+            <p class="title"> Italy </p>
+            <p class="subtitle"> You may find breathtaking cities, historic sites, fantastic museums, lofty mountains,
+              gorgeous beaches, and breathtaking natural landscape all in one place. It seems sense that it would be on
+              a lot of people's bucket lists. </p>
             <a class="button">Buy Tickets</a>
           </article>
         </div>
@@ -241,7 +266,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="contact">
     <div class="container has-text-centered">
       <h2 class="title">Contact</h2>
 
@@ -310,61 +335,77 @@
             <i class="fab fa-snapchat fa-2x"></i>
           </a>
         </p>
-        <p>
-          <a href="https://bulma.io">
-            <img src="https://bulma.io/images/made-with-bulma.png" alt="Made with Bulma" width="128" height="24">
-          </a>
-        </p>
       </div>
     </div>
   </footer>
+
+  
   <div id="carryon" class="modal modal-fx-3dSlit">
     <div class="modal-background"></div>
     <div class="modal-content is-large">
       <!-- content -->
       <div class="card">
-        <div class="card-image">
-          <figure class="image is-16by9">
-            <img src="https://travel.home.sndimg.com/content/dam/images/travel/fullrights/2016/12/21/0/Orig_LauraJames_Carry-on-Essentials-1.jpg.rend.hgtvcom.616.462.suffix/1491593303984.jpeg"
-              alt="Carry on essential">
-          </figure>
-        </div>
         <div class="card-content">
           <div class="media">
             <div class="media-content">
               <p class="title is-4">Carry On Essentials</p>
             </div>
           </div>
-          <div class="content">
-            <p>
-              <button id="three-body-problem" class="add-button">Add To Cart</button>
-              <span class="has-text-weight-bold"><a
-                  href="https://www.amazon.com/Travel-size-toiletries-Squeezable-Accessories/dp/B08ZL5P5F2/ref=sr_1_23?keywords=Carry+On+Essentials&qid=1658501663&sr=8-23" target="_blank">Refillable Silicone Toiletries Tubes</a></span>
-            </p>
-            <p>
-              <button id="exhalation" class="add-button">Add To Cart</button>
-              <span class="has-text-weight-bold"><a
+          <div id="it_grid" class="content">
+            <div id="items" class="item">
+              <p id="it">
+                <img id="stuff" src="https://m.media-amazon.com/images/I/51cghdit+LL._AC_SX679_.jpg" alt="Toiletries">
+                <span class="has-text-weight-bold"><a
+                    href="https://www.amazon.com/Travel-size-toiletries-Squeezable-Accessories/dp/B08ZL5P5F2/ref=sr_1_23?keywords=Carry+On+Essentials&qid=1658501663&sr=8-23"
+                    target="_blank">Refillable Silicone Toiletries Tubes</a></span>
+              </p>
+              <button id="toiletries" class="add-button">Add To Cart</button>
+            </div>
+            <div id="items" class="item">
+              <p id="it">
+                <img id="stuff" src="https://m.media-amazon.com/images/I/71yH4Qio3oL._AC_SX679_.jpg" alt="Bags">
+                <span class="has-text-weight-bold"><a
                   href="https://www.amazon.com/VacBest-Compression-Travel-Space-Clothes/dp/B07R45WXH9/ref=sr_1_24?keywords=Carry+On+Essentials&qid=1658501663&sr=8-24"
                   target="_blank">Compression Bags for Clothes</a></span>
-            </p>
-            <p>
-              <button id="recursion" class="add-button">Add To Cart</button>
-              <span class="has-text-weight-bold"><a
+              </p>
+              <button id="clothesBag" class="add-button">Add To Cart</button>
+            </div>
+            <div id="items" class="item">
+              <p id="it">
+                <img id="stuff" src="https://m.media-amazon.com/images/I/51bnpKwPpTL.jpg" alt="Kits">
+                <span class="has-text-weight-bold"><a
                   href="https://www.amazon.com/Convenience-Kits-Womens-Essences-9-Piece/dp/B0019IJZ1M/ref=sr_1_28?keywords=Carry+On+Essentials&qid=1658501663&sr=8-28"
                   target="_blank">Convenience Kits</a></span>
-            </p>
-            <p>
-              <button id="hyperion" class="add-button">Add To Cart</button>
-              <span class="has-text-weight-bold"><a
+              </p>
+              <button id="kit" class="add-button">Add To Cart</button>
+            </div>
+            <div id="items" class="item">
+              <p  id="it">
+                <img id="stuff" src="https://m.media-amazon.com/images/I/51bnpKwPpTL.jpg" alt="Backpack">
+                <span class="has-text-weight-bold"><a
                   href="https://www.amazon.com/Dinictis-Approved-Backpack-Waterproof-Weekender/dp/B07JCP8BF3/ref=sr_1_31_sspa?keywords=Carry+On+Essentials&qid=1658501663&sr=8-31-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyUDZWM0pDS0gzQkozJmVuY3J5cHRlZElkPUExMDI2MzYxMjRSRERVRFNIUTVLMiZlbmNyeXB0ZWRBZElkPUEwNDY2MTc4MUJaTTBOTlhPNThXNCZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="
                   target="_blank">Travel Laptop Backpack</a></span>
-            </p>
-            <p>
-              <button id="hyperion" class="add-button">Add To Cart</button>
-              <span class="has-text-weight-bold"><a
+              </p>
+              <button id="backpack" class="add-button">Add To Cart</button>
+            </div>
+            <div id="items" class="item">
+              <p id="it">
+                <img id="stuff" src="https://m.media-amazon.com/images/I/71Ayb22gJML._AC_SX522_.jpg" alt="headphones">
+                <span class="has-text-weight-bold"><a
+                  href="https://www.amazon.com/Cancelling-Headphones-Headphone-Wireless-Bluetooth/dp/B08G58RQXF/ref=sr_1_3?crid=2NCWGNLJ4RA8C&keywords=plane+headphones&qid=1658510618&sprefix=plane+hea%2Caps%2C76&sr=8-3"
+                  target="_blank">Headphones</a></span>
+              </p>
+              <button id="headphones" class="add-button">Add To Cart</button>
+            </div>
+            <div id="items" class="item">
+              <p id="it">
+                
+                <span class="has-text-weight-bold"><a
                   href="https://www.amazon.com/Miers-Labs-Homeopathic-Remedy-Count/dp/B00007KUX7/ref=sr_1_30_sspa?keywords=Carry+On+Essentials&qid=1658501663&sr=8-30-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEyUDZWM0pDS0gzQkozJmVuY3J5cHRlZElkPUExMDI2MzYxMjRSRERVRFNIUTVLMiZlbmNyeXB0ZWRBZElkPUEwNzI0Mzc5Mlg0S0sxTFEwUDhHSCZ3aWRnZXROYW1lPXNwX210ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU="
-                  target="_blank">Travel Laptop Backpack</a></span>
-            </p>
+                  target="_blank">Jet Lag Remedy (1 Pack, 32 Chewable Tablets)</a></span>
+              </p>
+              <button id="remedy" class="add-button">Add To Cart</button>
+            </div>
           </div>
         </div>
       </div>
@@ -395,7 +436,12 @@
 <!--
 This script places a badge on your repl's full-browser view back to your repl's cover page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green, teal, blue, blurple, magenta, pink!
 -->
-<script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+<!-- <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer> -->
+<script src="script.js">
+</script>
+<!-- This is what you were missing :)
+<script src="script.js"></script>
+-->
 </body>
 
 </html>

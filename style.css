@@ -1,9 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+
 html, body {
   height: 100%;
   width: 100%;
 }
 
-#logo{
-  width: 10%;
+#welcome{
+  background-image: url("https://i.pinimg.com/originals/c4/75/d2/c475d2ed22342957d6651a246a14edf6.jpg");
+  height: 140vh;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  z-index: 1;
 }
-
+#title{
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  padding-left: 10%;
+}
+#wl{
+  font-size: 70px;
+  font-family: 'Commissioner', sans-serif;
+}
+#tr{
+  font-size: 100px;
+  font-family: 'Sora', sans-serif;
+}
+#select{
+  box-shadow: 2px 2px 5px grey !important;
+  border: 1px black;
+}
+#col{
+  gap: 5%;
+}
+#it_grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5%;
+  padding: 2%;
+}
+#it{
+  display: flex;
+}
+#stuff{
+  width: 50%;
+  display: block;
+}
