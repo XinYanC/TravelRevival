@@ -5,7 +5,7 @@ cartItems = [];
 
 // Select the button for three-body-probelm.
 //let button1 = document.querySelector("#toiletries");
-//let buttons = document.querySelectorAll(".add-button");
+let buttons = document.querySelectorAll(".add-button");
 
 //let needs = {
 //  toiletries: "toiletries",
@@ -32,6 +32,7 @@ cartItems = [];
 
 let tot = document.querySelector("#total");
 let totalL = 0;
+let selected = 0;
 
 let toiletriesbutton = document.querySelector("#toiletries");
 let tqq = document.querySelector("#toiletriesquatity");
@@ -46,6 +47,7 @@ toiletriesbutton.addEventListener('click', (e) => {
   //let totalLL = 0;
   let price = 7.99;
   let tt = tq * price;
+  tt = Math.round(100*tt)/100;
   totalL = (totalL + tt) - ((tq-1) * price);
   totalL = Math.round(100*totalL)/100;
   //totalL += totalLL;
@@ -54,17 +56,22 @@ toiletriesbutton.addEventListener('click', (e) => {
   // cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
   let each = "<p>" + tq + " - " + toiletries + ": $" + tt + " (at $" + price + " each)</p>";
   toiletry = [];
-  console.log("1" + toiletry); 
+  console.log("toiletry1 " + toiletry); 
   toiletry.push(each);
-  console.log("2" + toiletry); 
-  cartItems.splice(0, tq-1);
-  cartItems.push(toiletry);
-  console.log("3" + cartItems);
-  cartItems.sort();
-  cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
+  console.log("toiletryPUSHEACH2 " + toiletry); 
+  // cartItems.splice(0, tq-1);
+  // cartItems.splice(0, tq-1);
+  // cartItems.push(toiletry);
+  // cartItems.unshift(toiletry);
+  // console.log("cartItemsUNSHIFT3 " + cartItems)
+  // cartItems.splice(1, 1);
+  // console.log("cartItemsSPLICE4 " + cartItems);
+  // cartItems.sort();
+  // cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
   tqq.innerHTML = "Quantity: " + tq;
   tot.innerHTML = "Total: $" + totalL;
   console.log("Added " + toiletries);
+  selected++;
 });
 
 let clothesBagbutton = document.querySelector("#clothesBag");
@@ -79,21 +86,28 @@ clothesBagbutton.addEventListener('click', (e) => {
   //let totalLL = 0;
   let price = 12.99;
   let tt = bq * price;
+  tt = Math.round(100*tt)/100;
   totalL = (totalL + tt) - ((bq-1) * price);
   totalL = Math.round(100*totalL)/100;
   let each = "<p>" + bq + " - " + bagg + ": $" + tt + " (at $" + price + " each)</p>";
   bag = [];
   bag.push(each); 
-  console.log("a" + cartItems);
-  console.log("b" + bag);
-  cartItems.splice(0, bq-1);
-  cartItems.push(bag);
-  console.log("c" + cartItems);
-  cartItems.sort();
-  cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
+  // console.log("1" + cartItems);
+  // console.log("2" + bag);
+  // // cartItems.splice(0, bq-1);
+  // // cartItems.splice(0, bq-1);
+  // // cartItems.push(bag);
+  // cartItems.unshift(bag);
+  // console.log("cartItemsUNSHIFT3 " + cartItems)
+  // // cartItems.splice(0, bq-1);
+  // cartItems.splice(1, 1);
+  // console.log("cartItemsSPLICE4 " + cartItems);
+  // cartItems.sort();
+  // cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
   bqq.innerHTML = "Quantity: " + bq;
   tot.innerHTML = "Total: $" + totalL;
   console.log("Added " + bagg);
+  selected++;
 });
 
 
@@ -106,29 +120,61 @@ kitbutton.addEventListener('click', (e) => {
   console.log("Button clicked");
   let kitt = "Convenience Kits";
   kq++;
-  //let totalLL = 0;
   let price = 9.05;
   let tt = kq * price;
+  tt = Math.round(100*tt)/100;
   totalL = (totalL + tt) - ((kq-1) * price);
   totalL = Math.round(100*totalL)/100;
   let each = "<p>" + kq + " - " + kitt + ": $" + tt + " (at $" + price + " each)</p>";
   kit = [];
-  kit.push(each); 
-  console.log("a" + cartItems);
-
-  
-  let indec = cartItems.indexOf(kit);
-  console.log(indec);
-  
-  console.log("b" + kit);
-  cartItems.splice(0, kq-1);
-  cartItems.push(kit);
-  console.log("c" + cartItems);
-  cartItems.sort();
-  cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
+  kit.push(each);
   kqq.innerHTML = "Quantity: " + kq;
   tot.innerHTML = "Total: $" + totalL;
   console.log("Added " + kitt);
+  selected++;
 });
 
 
+// let backpackbutton = document.querySelector("#backpack");
+// let bpqq = document.querySelector("#backpackquatity");
+// let bpq = 0;
+// let back = [];
+
+// backpackbutton.addEventListener('click', (e) => {
+//   console.log("Button clicked");
+//   let backk = "Convenience Kits";
+//   bpq++;
+//   let price = 9.05;
+//   let tt = bpq * price;
+//   tt = Math.round(100*tt)/100;
+//   totalL = (totalL + tt) - ((bpq-1) * price);
+//   totalL = Math.round(100*totalL)/100;
+//   let each = "<p>" + bpq + " - " + backk + ": $" + tt + " (at $" + price + " each)</p>";
+//   back = [];
+//   back.push(each);
+//   bpqq.innerHTML = "Quantity: " + bpq;
+//   tot.innerHTML = "Total: $" + totalL;
+//   console.log("Added " + backk);
+//   selected++;
+// });
+
+
+buttons.forEach(button => button.addEventListener('click', () => {
+  console.log("all");
+  cartItems.splice(1, selected);
+  cartItems.unshift(toiletry);
+  console.log("cartItemsUNSHIFT3 " + cartItems)
+  // cartItems.splice(1, selected);
+  console.log("cartItemsSPLICE4 " + cartItems);
+  cartItems.unshift(bag);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  console.log("cartItemsSPLICE4 " + cartItems);
+  cartItems.unshift(kit);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  console.log("cartItemsSPLICE4 " + cartItems);
+  // cartItems.unshift(back);
+  // console.log("cartItemsUNSHIFT3 " + cartItems);
+  // console.log("cartItemsSPLICE4 " + cartItems);
+  cartItems.sort();
+  cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
+}));
