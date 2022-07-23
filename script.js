@@ -135,46 +135,92 @@ kitbutton.addEventListener('click', (e) => {
 });
 
 
-// let backpackbutton = document.querySelector("#backpack");
-// let bpqq = document.querySelector("#backpackquatity");
-// let bpq = 0;
-// let back = [];
+let backpackbutton = document.querySelector("#backpack");
+let bpqq = document.querySelector("#backpackquatity");
+let bpq = 0;
+let back = [];
 
-// backpackbutton.addEventListener('click', (e) => {
-//   console.log("Button clicked");
-//   let backk = "Convenience Kits";
-//   bpq++;
-//   let price = 9.05;
-//   let tt = bpq * price;
-//   tt = Math.round(100*tt)/100;
-//   totalL = (totalL + tt) - ((bpq-1) * price);
-//   totalL = Math.round(100*totalL)/100;
-//   let each = "<p>" + bpq + " - " + backk + ": $" + tt + " (at $" + price + " each)</p>";
-//   back = [];
-//   back.push(each);
-//   bpqq.innerHTML = "Quantity: " + bpq;
-//   tot.innerHTML = "Total: $" + totalL;
-//   console.log("Added " + backk);
-//   selected++;
-// });
+backpackbutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let backk = "Travel Laptop Backpack";
+  bpq++;
+  let price = 49.99;
+  let tt = bpq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((bpq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + bpq + " - " + backk + ": $" + tt + " (at $" + price + " each)</p>";
+  back = [];
+  back.push(each);
+  bpqq.innerHTML = "Quantity: " + bpq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + backk);
+  selected++;
+});
+
+let headphonesbutton = document.querySelector("#headphones");
+let hpqq = document.querySelector("#headphonesquatity");
+let hpq = 0;
+let head = [];
+
+headphonesbutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let headd = "Headphones";
+  hpq++;
+  let price = 39.99;
+  let tt = hpq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((hpq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + hpq + " - " + headd + ": $" + tt + " (at $" + price + " each)</p>";
+  head = [];
+  head.push(each);
+  hpqq.innerHTML = "Quantity: " + hpq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + headd);
+  selected++;
+});
+
+let remedybutton = document.querySelector("#remedy");
+let rqq = document.querySelector("#remedyquatity");
+let rq = 0;
+let rem = [];
+
+remedybutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let remm = "Jet Lag Remedy (1 Pack, 32 Chewable Tablets)";
+  rq++;
+  let price = 14.40;
+  let tt = rq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((rq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + rq + " - " + remm + ": $" + tt + " (at $" + price + " each)</p>";
+  rem = [];
+  rem.push(each);
+  rqq.innerHTML = "Quantity: " + rq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + remm);
+  selected++;
+});
 
 
 buttons.forEach(button => button.addEventListener('click', () => {
   console.log("all");
-  cartItems.splice(1, selected);
+  cartItems.splice(1, selected+3);
+  console.log("SPLICE " + cartItems)
   cartItems.unshift(toiletry);
   console.log("cartItemsUNSHIFT3 " + cartItems)
-  // cartItems.splice(1, selected);
-  console.log("cartItemsSPLICE4 " + cartItems);
   cartItems.unshift(bag);
   console.log("cartItemsUNSHIFT3 " + cartItems);
-  console.log("cartItemsSPLICE4 " + cartItems);
   cartItems.unshift(kit);
   console.log("cartItemsUNSHIFT3 " + cartItems);
-  console.log("cartItemsSPLICE4 " + cartItems);
-  // cartItems.unshift(back);
-  // console.log("cartItemsUNSHIFT3 " + cartItems);
-  // console.log("cartItemsSPLICE4 " + cartItems);
+  cartItems.unshift(back);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(head);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(rem);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
   cartItems.sort();
   cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
 }));
