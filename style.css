@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap');
 
 html, body {
   height: 100%;
@@ -58,4 +59,36 @@ html, body {
 #words{
   display: flex;
   flex-direction: column;
+}
+
+#lon{
+  padding: 3% 10%;
+}
+
+#lon_word{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 70px;
+  text-shadow: #000 0px 0px 5px, #000 0px 0px 6px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px, #000 0px 0px 1px;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Comfortaa', cursive;
+}
+#lon_img{
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  text-align: center;
+}
+#lon_backg{
+  margin-bottom: 3%;
+}
+#buy{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5% 10%;
 }
