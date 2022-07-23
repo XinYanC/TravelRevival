@@ -205,9 +205,104 @@ remedybutton.addEventListener('click', (e) => {
 });
 
 
+let showkoobutton = document.querySelector("#showkoo");
+let skqq = document.querySelector("#showkooquantity");
+let skq = 0;
+let show = [];
+
+showkoobutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let showw = "SHOWKOO Luggage Sets, 3-piece set";
+  skq++;
+  let price = 189.99;
+  let tt = skq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((skq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + skq + " - " + showw + ": $" + tt + " (at $" + price + " each)</p>";
+  show = [];
+  show.push(each);
+  skqq.innerHTML = "Quantity: " + skq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + showw);
+  selected++;
+});
+
+
+let wranglerbutton = document.querySelector("#wrangler");
+let wrqq = document.querySelector("#wranglerquantity");
+let wrq = 0;
+let wran = [];
+
+wranglerbutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let wrann = "Wrangler Luggage Set";
+  wrq++;
+  let price = 179.18;
+  let tt = wrq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((wrq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + wrq + " - " + wrann + ": $" + tt + " (at $" + price + " each)</p>";
+  wran = [];
+  wran.push(each);
+  wrqq.innerHTML = "Quantity: " + wrq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + wrann);
+  selected++;
+});
+
+
+let travelersbutton = document.querySelector("#travelers");
+let ttqq = document.querySelector("#travelersquantity");
+let ttq = 0;
+let trave = [];
+
+travelersbutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let travee = "Travelers Club Sky+ Luggage Set";
+  ttq++;
+  let price = 53.43;
+  let tt = ttq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((ttq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + ttq + " - " + travee + ": $" + tt + " (at $" + price + " each)</p>";
+  trave = [];
+  trave.push(each);
+  ttqq.innerHTML = "Quantity: " + ttq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + travee);
+  selected++;
+});
+
+let kidsbutton = document.querySelector("#kids");
+let kkqq = document.querySelector("#kidsquatity");
+let kkq = 0;
+let kid = [];
+
+kidsbutton.addEventListener('click', (e) => {
+  console.log("Button clicked");
+  let kidd = "Travelers Club Kids' 5 Piece Luggage Travel Set";
+  kkq++;
+  let price = 63.00;
+  let tt = kkq * price;
+  tt = Math.round(100*tt)/100;
+  totalL = (totalL + tt) - ((kkq-1) * price);
+  totalL = Math.round(100*totalL)/100;
+  let each = "<p>" + kkq + " - " + kidd + ": $" + tt + " (at $" + price + " each)</p>";
+  kid = [];
+  kid.push(each);
+  kkqq.innerHTML = "Quantity: " + kkq;
+  tot.innerHTML = "Total: $" + totalL;
+  console.log("Added " + kidd);
+  selected++;
+});
+
+
 buttons.forEach(button => button.addEventListener('click', () => {
   console.log("all");
-  cartItems.splice(1, selected+3);
+  cartItems.splice(1, selected+7);
   console.log("SPLICE " + cartItems)
   cartItems.unshift(toiletry);
   console.log("cartItemsUNSHIFT3 " + cartItems)
@@ -220,6 +315,14 @@ buttons.forEach(button => button.addEventListener('click', () => {
   cartItems.unshift(head);
   console.log("cartItemsUNSHIFT3 " + cartItems);
   cartItems.unshift(rem);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(show);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(wran);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(trave);
+  console.log("cartItemsUNSHIFT3 " + cartItems);
+  cartItems.unshift(kid);
   console.log("cartItemsUNSHIFT3 " + cartItems);
   cartItems.sort();
   cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";

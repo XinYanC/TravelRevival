@@ -20,6 +20,7 @@ html, body {
   color: white;
   justify-content: center;
   padding-left: 10%;
+  text-shadow: 5px 6px 1.5px black;
 }
 #wl{
   font-size: 70px;
