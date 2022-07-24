@@ -71,19 +71,144 @@
 
   <div id="buy">
     <div>
-      <p>Make Selections</p>
-      <p>heknjenak</p>
+      <p class="title">Available Options</p><br>
+      <p class="subtitle">Choose from the following available dates. </p>
+      <div id="layout">
+        <div id="calendar">
+            <div id="cont" class="boo">
+              <div class="calendar">
+                <div class="front">
+                  <div class="current-date">
+                    <h1>Monday 25th</h1>
+                    <h1>July 2022</h1> 
+                  </div>
+        
+                  <div class="current-month">
+                    <ul class="week-days">
+                      <li>SUN</li>
+                      <li>MON</li>
+                      <li>TUE</li>
+                      <li>WED</li>
+                      <li>THU</li>
+                      <li>FRI</li>
+                      <li>SAT</li>
+                    </ul>
+        
+                    <div class="weeks">
+                      <div class="first">
+                        <span class="last-month">26</span>
+                        <span class="last-month">27</span>
+                        <span class="last-month">28</span>
+                        <span class="last-month">29</span>
+                        <span class="last-month">30</span>
+                        <span class="active">01</span>
+                        <span class="active">02</span>
+                      </div>
+        
+                      <div class="second">
+                        <span class="active">03</span>
+                        <span class="active">04</span>
+                        <span class="active">05</span>
+                        <span>06</span>
+                        <span>07</span>
+                        <span class="active">08</span>
+                        <span class="active">09</span>
+                      </div>
+        
+                      <div class="third">
+                        <span class="active">10</span>
+                        <span class="active">11</span>
+                        <span>12</span>
+                        <span class="active">13</span>
+                        <span class="active">14</span>
+                        <span>15</span>
+                        <span>16</span>
+                      </div>
+        
+                      <div class="fourth">
+                        <span>17</span>
+                        <span class="active">18</span>
+                        <span>19</span>
+                        <span class="active">20</span>
+                        <span class="active">21</span>
+                        <span class="active">22</span>
+                        <span>23</span>
+                      </div>
+        
+                      <div class="fifth">
+                        <span>24</span>
+                        <span>25</span>
+                        <span class="active">26</span>
+                        <span class="active">27</span>
+                        <span class="active">28</span>
+                        <span>29</span>
+                        <span class="active">30</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      <div id="choose" class="hidden">
+        <p id="ticket_price"></p>
+        <p>How many tickets are you purchasing?</p>
+        <select id="num_tickets">
+            <option value=0>Select</option>
+            <option value=1>1 ticket</option>
+            <option value=2>2 tickets</option>
+            <option value=3>3 tickets</option>
+            <option value=4>4 tickets</option>
+            <option value=5>5 tickets</option>
+        </select>
+        <p>What type of ticket are purchasing? (Round trip tickets are double the price)</p>
+        <select id="num_type">
+            <option value=1>Select</option>
+            <option value=1>One-way ticket</option>
+            <option value=2>Round trip ticket</option>
+        </select>
+        <p>Will you have a carry on bag? (Max 1 per person with $10 each)</p>
+        <select id="num_carry">
+            <option value=0>No</option>
+            <option value=10>Yes</option>
+        </select>
+        <p>Do you have a checked bag? (Max 2 per person with $20 each)</p>
+        <select id="num_checked">
+            <option value=0>No</option>
+            <option value=1>Yes 1</option>
+            <option value=2>Yes 2</option>
+        </select>
+        <p>How many oversize baggages do you have? ($75 for each baggage weighing more than 51 pounds)</p>
+        <select id="num_oversize">
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+        </select>
+        <p>Add any questions, comments, and concerns.</p>
+        <textarea class="textarea" placeholder="Questions, comments, and concerns"></textarea>
+      </div>
+        
+      </div>
+        
+      
     </div>
     <div>
       <p>
-        <span class="tag is-size-4 has-background-dark has-text-white">Your Essentials Shopping Cart</span>
+        <span class="tag is-size-4 has-background-dark has-text-white">Your Airline Cart</span>
       </p>
-        <br><p>
-                (Add items to your cart by browsing below and clicking the "Add To Cart" button.)</p>
+      <br>
+      <p id="total_tic_price"></p>
+      <p id="carryonfee"></p>
+      <p id="checkedbagfee"></p>
+      <p id="oversizebagfee"></p>
+      <p><strong>Airline Fee:</strong> $20</p>
         <br>
         <div id="buyy"></div>
         <hr>
-        <h3 id="total">Total: </h3><br>
+        <h3 id="tic_total">Total: </h3><br>
         <a class="button has-background-dark has-text-white is-size-6" href="cart.html">Checkout</a>
     </div>
   </div>
@@ -96,6 +221,7 @@
 </html>
 <script src="script.js">
 </script>
+<script src="filename.js" defer></script>
 <!-- This is what you were missing :)
 <script src="script.js"></script>
 -->

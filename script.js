@@ -327,3 +327,4 @@ buttons.forEach(button => button.addEventListener('click', () => {
   cartItems.sort();
   cart.innerHTML = "<UL><LI><b>" + cartItems.join("</b></LI><LI><b>") + "</b></LI></UL>";
 }));
+
